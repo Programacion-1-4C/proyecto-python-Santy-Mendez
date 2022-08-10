@@ -1,5 +1,5 @@
 print("BIENVENIDO AL ALGORITMO PARA GRAFICAS")
-persona = input("Ingrese VENDEDOR si ustdes es el vendedor de lo contrario escriba CONSUMIDOR\n>>>")
+persona = input("Ingrese VENDEDOR si usted es el vendedor de lo contrario escriba CONSUMIDOR\n>>>")
 if persona == "VENDEDOR":
     usuario = input("Ingrese usuario\n>>>")
     contraseña = input("Ingrese la contraseña\n>>>")
