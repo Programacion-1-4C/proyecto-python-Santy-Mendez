@@ -1,3 +1,4 @@
+
 print("BIENVENIDO AL ALGORITMO PARA GRAFICAS")
 persona = input("Ingrese VENDEDOR si usted es el vendedor de lo contrario escriba CONSUMIDOR\n>>>")
 if persona == "VENDEDOR":
@@ -10,3 +11,11 @@ if persona == "VENDEDOR":
             print("2. Cambiar Stock")
             print("3. Salir")
             opcion = int(input("Ingrese una opcion\n>>>"))
+            if opcion == "1":
+                pass
+            if opcion == "2":
+                pass
+            if opcion == "3":
+                break
+
+
