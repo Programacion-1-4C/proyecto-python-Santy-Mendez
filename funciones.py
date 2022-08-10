@@ -1,2 +1,3 @@
-def menu():
-    print("Este menu")
+def Poner_stock (num):
+    lista_graficas = []
+    n = int(input(""))
