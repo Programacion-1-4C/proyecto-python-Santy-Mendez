@@ -33,13 +33,13 @@ def mostrar_lista(lista):
         print("-"*50)
 
 def cambiar_datos(todas_listas):
-    nombre = input("Ingrese el nombre de la lista")
+    nombre = input("Ingrese el nombre de la lista\n>>>")
     for sub_lista in todas_listas:
         if sub_lista[0][1] == nombre:
-            elemento_1= input("Ingrese que parte de la lista quiere cambiar ")
+            elemento_1= input("Ingrese que parte de la lista quiere cambiar\n>>> ")
             for j in sub_lista:
                 if j[0] == elemento_1:
-                    j[1] = input("Ingrese el nuevo dato")
+                    j[1] = input("Ingrese el nuevo dato\n>>>")
 
 
 
