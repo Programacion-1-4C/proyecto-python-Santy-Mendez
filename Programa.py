@@ -24,17 +24,17 @@ if persona_1== "VENDEDOR":
             if opcion == 4:
                 print("Salir")
                 break
-    if usuario != "over" or contraseña != "over145@":
-        sesion = "no activada"
-        while sesion == "no activada":
-            print("1 . Comprar Grafica")
-            print("2.  Consultar Precio")
-            print("3 .  Salir")
-            opcions = int(input("Ingrese una opcion\n>>>"))
-            if opcions == 1:
-                compras(todas_listas)
-            if opcions == 2:
-                mostrar_lista(todas_listas)
-            if opcions == 3:
-                print("Vuelva Pronto!")
-                break
+if persona_1 == "CONSUMIDOR":
+    sesion = "no activada"
+    while sesion == "no activada":
+        print("1 . Comprar Grafica")
+        print("2.  Consultar Precio")
+        print("3 .  Salir")
+        opcions = int(input("Ingrese una opcion\n>>>"))
+        if opcions == 1:
+            compras(todas_listas)
+        if opcions == 2:
+            mostrar_lista(todas_listas)
+        if opcions == 3:
+            print("Vuelva Pronto!")
+            break
