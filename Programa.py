@@ -1,4 +1,4 @@
-from funciones import org_lista, mostrar_lista,cambiar_datos
+from funciones import org_lista, mostrar_lista,cambiar_datos, compras
 todas_listas =[]
 print("BIENVENIDO AL ALGORITMO PARA GRAFICAS")
 persona = input("Ingrese VENDEDOR si usted es el vendedor de lo contrario escriba CONSUMIDOR\n>>>")
@@ -32,10 +32,9 @@ if persona_1== "VENDEDOR":
             print("3 .  Salir")
             opcions = int(input("Ingrese una opcion\n>>>"))
             if opcions == 1:
-                pass
+                compras(todas_listas)
             if opcions == 2:
-                pass
+                mostrar_lista(todas_listas)
             if opcions == 3:
                 print("Vuelva Pronto!")
                 break
-

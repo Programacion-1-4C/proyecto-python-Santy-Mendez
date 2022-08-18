@@ -40,10 +40,66 @@ def cambiar_datos(todas_listas):
             for j in sub_lista:
                 if j[0] == elemento_1:
                     j[1] = input("Ingrese el nuevo dato\n>>>")
+def compras(todas_listas):
+    name = input("Ingrese el modelo de la grafica\n>>>")
+    for sub_lista in todas_listas:
+        if sub_lista[13][14] == name:
+            print(sub_lista)
+            pregunta = input("Lo vas a compras\n>>>? ")
+            if pregunta == "si":
+                print("compra")
+        else:
+            pregunta_2 = input("Quieres buscar otra grafica?\n>>>")
+            if pregunta_2 == "si":
+                print(todas_listas)
+                pregunta_3=input("Encontraste algo para comprar?")
+                if pregunta_3 == "si":
+                    print("comprar")
+                else:
+                    print("No tenemos la grafica que buscas, disiculpanos :(")
+            else:
+                print("No tenemos la grafica que buscas, disiculpanos :(")
+def metodo_pago():
+    print("Opciones de Pago:")
+    print(">>>1.Paypal")
+    print(">>>2.Mercado Pago")
+    print(">>>3.Targeta de Credito/Debito")
+    print(">>>4.Tranferencia")
+    print(">>>5. Efectivo")
+    metodo= input("Ingrese la opcion\n>>>")
+    if metodo == 1:
+        print("Para enviar los dolares equivalente al precio del producto envielo a la siguiente direccion de email")
+        print("Y envie el comprbante por ese mismo email")
+        print(">>>Email:GraficasOn@gmail.com")
+    if metodo == 2:
+        print("Para pagar por mercado pago hagalo por medio del CBU o ALIAS")
+        print(">>> CBU: 0000003100093985126731"
+              ">>> ALIAS : casa.pc.1")
+        print("Enviar comprobante por Whatsapp al siguiente numero")
+        print(">>> Numero: 3518579473")
+    if metodo == 3:
+        #Sistema de verificacion casero
+        num = int(input("Ingrese los numeros de la targeta"))
+        contador = len(str(num))
+        if contador > 16:
+            print("Disculpe , no aceptamos sus tarjeta ")
+        else:
+            print("Si aceptamos su tarjeta!")
+            if contador == 15:
+                print("Tarjeta American Express")
+                nombre = input("Ingrese el nombre")
+                nombre_M = nombre.upper()
+                dia_vencimiento = int(input("Ingrese el dia del venicimiento"))
+                mes_vencimiento = int(input("Ingrese el mes de vencimiento"))
+                if dia_vencimiento >31 and mes_vencimiento >8:
+                    print("Tarjeta vencida")
+                else:
 
 
 
 
 
-
-
+    if metodo == 4:
+        pass
+    if metodo == 5:
+        pass
