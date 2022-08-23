@@ -45,7 +45,7 @@ def compras(todas_listas):
     for sub_lista in todas_listas:
         if sub_lista[13][14] == name:
             print(sub_lista)
-            pregunta = input("Lo vas a compras\n>>>? ")
+            pregunta = input("Lo vas a compras?\n>>> ")
             if pregunta == "si":
                 print("compra")
                 print("Opciones de Pago:")
@@ -66,7 +66,23 @@ def compras(todas_listas):
                     print("Enviar comprobante por Whatsapp al siguiente numero")
                     print(">>> Numero: 3518579473")
                 if metodo == 3:
-                    pass
+                    primeros_4 = int(input("Ingrese los primeros 4 nuermos de la tarjeta \n>>>"))
+                    contador_1 = len(str(primeros_4))
+                    segundos_4 = int(input("Ingrese los segundos 4 nuermos de la tarjeta \n>>>"))
+                    contador_2 = len(str(segundos_4))
+                    terceros_4 = int(input("Ingrese los terceros 4 nuermos de la tarjeta \n>>>"))
+                    contador_3 = len(str(terceros_4))
+                    ultimos_4 = int(input("Ingrese los cuartos 4 nuermos de la tarjeta \n>>>"))
+                    contador_4 = len(str(ultimos_4))
+                    nombre_y_apellido = input("Ingrese el nombre y apelido del titular\n>>>")
+                    nombre_y_apellido_2 = nombre_y_apellido.upper()
+                    mes_cvv = int(input("Ingrese el mes del vencimiento \n>>>"))
+                    año_cvv = int(input("Ingrese el año de vencimiento\n>>>"))
+                    if mes_cvv != 8 and año_cvv != 22 and contador_1 == 4 and contador_2 == 4 and contador_3 == 4 and contador_4 == 4:
+                        print("Datos aceptados ")
+                        print("La compra fue correctamente hecha!")
+                    else:
+                        print("ERROR: Revisa los datos.....")
                 if metodo == 4:
                     print("Para Transferencias por favor mandelo a el siguiente CBU")
                     print(">>>CBU:0000003100093985126731")
@@ -76,7 +92,7 @@ def compras(todas_listas):
             pregunta_2 = input("Quieres buscar otra grafica?\n>>>")
             if pregunta_2 == "si":
                 print(todas_listas)
-                pregunta_3=input("Encontraste algo para comprar?")
+                pregunta_3=input("Encontraste algo para comprar?\n>>>")
                 if pregunta_3 == "si":
                     print("comprar")
                     print("Opciones de Pago:")
@@ -98,7 +114,23 @@ def compras(todas_listas):
                         print("Enviar comprobante por Whatsapp al siguiente numero")
                         print(">>> Numero: 3518579473")
                     if metodo == 3:
-                        pass
+                        primeros_4 = int(input("Ingrese los primeros 4 nuermos de la tarjeta \n>>>"))
+                        contador_1 = len(str(primeros_4))
+                        segundos_4 = int(input("Ingrese los segundos 4 nuermos de la tarjeta \n>>>"))
+                        contador_2 = len(str(segundos_4))
+                        terceros_4 = int(input("Ingrese los terceros 4 nuermos de la tarjeta \n>>>"))
+                        contador_3 = len(str(terceros_4))
+                        ultimos_4 = int(input("Ingrese los cuartos 4 nuermos de la tarjeta \n>>>"))
+                        contador_4 = len(str(ultimos_4))
+                        nombre_y_apellido = input("Ingrese el nombre y apelido del titular\n>>>")
+                        nombre_y_apellido_2 = nombre_y_apellido.upper()
+                        mes_cvv = int(input("Ingrese el mes del vencimiento \n>>>"))
+                        año_cvv = int(input("Ingrese el año de vencimiento\n>>>"))
+                        if mes_cvv != 8 and año_cvv != 22 and contador_1 == 4 and contador_2 == 4 and contador_3 == 4 and contador_4 == 4:
+                            print("Datos aceptados ")
+                            print("La compra fue correctamente hecha!")
+                        else:
+                            print("ERROR: Revisa los datos.....")
                     if metodo == 4:
                         print("Para Transferencias por favor mandelo a el siguiente CBU")
                         print(">>>CBU:0000003100093985126731")
