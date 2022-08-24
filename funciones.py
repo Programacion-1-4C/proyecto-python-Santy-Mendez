@@ -7,7 +7,7 @@ LISTA_MOSTRAR = {
     "marca": "3. Marca que vende el producto:",
     "chipset": "4. Fabircante del Chipset:",
     "modelo": "5. Modelo de la grafica:",
-    "memoria": "6. Cantidad de Mmeoria:",
+    "memoria": "6. Cantidad de Memoria:",
     "refrigeracion": "7. Info de refrigeracion:",
     "puertos": "8. Cantidad de Puertos:",
     "rgb": "9. Cuenta con RGB:",
@@ -165,8 +165,8 @@ def compras(todas_listas):
                         else:
                             print("ERROR: Revisa los datos.....")
                     if metodo == 4:
-                        print("Para Transferencias por favor mandelo a el siguiente CBU")
-                        print(">>>CBU:0000003100093985126731")
+                        print("Para Transferencias por favor mandelo a el siguiente CVU")
+                        print(">>>CVU:0000003100093985126731")
                     if metodo == 5:
                         print("Por favor abone el monto del producto en caja")
                 else:
