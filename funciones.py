@@ -117,8 +117,8 @@ def compras(todas_listas):
                     else:
                         print("ERROR: Revisa los datos.....")
                 if metodo == 4:
-                    print("Para Transferencias por favor mandelo a el siguiente CBU")
-                    print(">>>CBU:0000003100093985126731")
+                    print("Para Transferencias por favor mandelo a el siguiente CVU")
+                    print(">>>CVU:0000003100093985126731")
                 if metodo == 5:
                     print("Por favor abone el monto del producto en caja")
         else:
@@ -141,8 +141,8 @@ def compras(todas_listas):
                         print("Y envie el comprbante por ese mismo email")
                         print(">>>Email:GraficasOn@gmail.com")
                     if metodo == 2:
-                        print("Para pagar por mercado pago hagalo por medio del CBU o ALIAS")
-                        print(">>> CBU: 0000003100093985126731"
+                        print("Para pagar por mercado pago hagalo por medio del CVU o ALIAS")
+                        print(">>> CVU: 0000003100093985126731"
                               ">>> ALIAS : casa.pc.1")
                         print("Enviar comprobante por Whatsapp al siguiente numero")
                         print(">>> Numero: 3518579473")
@@ -155,7 +155,7 @@ def compras(todas_listas):
                         contador_3 = len(str(terceros_4))
                         ultimos_4 = int(input("Ingrese los cuartos 4 nuermos de la tarjeta \n>>>"))
                         contador_4 = len(str(ultimos_4))
-                        nombre_y_apellido = input("Ingrese el nombre y apelido del titular\n>>>")
+                        nombre_y_apellido = input("Ingrese el nombre y apellido del titular\n>>>")
                         nombre_y_apellido_2 = nombre_y_apellido.upper()
                         mes_cvv = int(input("Ingrese el mes del vencimiento \n>>>"))
                         año_cvv = int(input("Ingrese el año de vencimiento\n>>>"))
