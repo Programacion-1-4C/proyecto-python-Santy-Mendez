@@ -1,3 +1,22 @@
+import json
+
+
+LISTA_MOSTRAR = {
+    "nombre": "1. Nombre de la Lista:",
+    "cantidad": "2. Cantidad de graficas:",
+    "marca": "3. Marca que vende el producto:",
+    "chipset": "4. Fabircante del Chipset:",
+    "modelo": "5. Modelo de la grafica:",
+    "memoria": "6. Cantidad de Mmeoria:",
+    "refrigeracion": "7. Info de refrigeracion:",
+    "puertos": "8. Cantidad de Puertos:",
+    "rgb": "9. Cuenta con RGB:",
+    "precio": "10 Precio del producto:"
+
+
+}
+
+
 def org_lista(todas_listas):
     nombre = input("Ingrese el nombre de la lista\n>>>")
     cantidad = int(input("Ingrese la cantidad de graficas de este tipo que tiene\n>>>"))
@@ -10,41 +29,55 @@ def org_lista(todas_listas):
     puertos = int(input("Ingrese la cantidad de puertos\n>>>"))
     rgb = input("Especifique si cuenta con retroiluminacion\n>>>")
     precio = int(input("Ingrese el precio del producto\n>>>"))
-    todas_listas.append([
-        ("Nombre de la Lista:", nombre),
-        ("Cantidad de graficas:", cantidad),
-        ("Marca que vende el producto:", marca),
-        ("Cantidad de graficas:", cantidad),
-        ("Marca que vende el producto:", marca),
-        ("Fabircante del Chipset:", chipset),
-        ("Modelo de la grafica:", modelo),
-        ("Cantidad de Mmeoria:", memoria),
-        ("Info de refrigeracion:", refrigeracion),
-        ("Cantidad de Puertos:", puertos),
-        ("Cuenta con RGB:", rgb),
-        ("Precio del producto:", precio),
-    ])
-
+    todas_listas.append(
+        {
+            "nombre": nombre,
+            "cantidad": cantidad,
+            "marca": marca,
+            "chipset": chipset,
+            "modelo": modelo,
+            "memoria": memoria,
+            "refrigeracion": refrigeracion,
+            "puertos": puertos,
+            "rgb": rgb,
+            "precio": precio
+        }
+    )
+    with open('json_data.json', 'w') as outfile:
+        json.dump({"productos": todas_listas}, outfile)
 
 def mostrar_lista(lista):
     for sub_lista in lista:
         for elemento in sub_lista:
-            print(elemento[0], " ", elemento[1])
+            print(LISTA_MOSTRAR[elemento], " ", sub_lista[elemento])
         print("-"*50)
+
+def leer_desde_archivo():
+    try:
+        with open('json_data.json') as json_file:
+            data = json.load(json_file)
+            return data["productos"]
+    except FileNotFoundError:
+        return []
 
 def cambiar_datos(todas_listas):
     nombre = input("Ingrese el nombre de la lista\n>>>")
     for sub_lista in todas_listas:
-        if sub_lista[0][1] == nombre:
-            elemento_1= input("Ingrese que parte de la lista quiere cambiar\n>>> ")
-            for j in sub_lista:
-                if j[0] == elemento_1:
-                    j[1] = input("Ingrese el nuevo dato\n>>>")
+        if sub_lista["nombre"] == nombre:
+            elemento_1 = input("Ingrese el numero de la párte en la que quieres cambiar los datos\n>>> ")
+            elemento_1 = list(sub_lista.keys())[int(elemento_1) -1]
+            if elemento_1 in sub_lista:
+                sub_lista[elemento_1] = input("Ingrese el nuevo dato\n>>>")
+
+    with open('json_data.json', 'w') as outfile:
+        json.dump({"productos": todas_listas}, outfile)
+
 def compras(todas_listas):
     name = input("Ingrese el modelo de la grafica\n>>>")
     for sub_lista in todas_listas:
-        if sub_lista[13][14] == name:
-            print(sub_lista)
+        if sub_lista["modelo"] == name:
+            print(LISTA_MOSTRAR, " ", sub_lista)
+            print("-" * 50)
             pregunta = input("Lo vas a compras?\n>>> ")
             if pregunta == "si":
                 print("compra")
