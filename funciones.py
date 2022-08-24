@@ -76,8 +76,7 @@ def compras(todas_listas):
     name = input("Ingrese el modelo de la grafica\n>>>")
     for sub_lista in todas_listas:
         if sub_lista["modelo"] == name:
-            print(LISTA_MOSTRAR, " ", sub_lista)
-            print("-" * 50)
+            print(sub_lista)
             pregunta = input("Lo vas a compras?\n>>> ")
             if pregunta == "si":
                 print("compra")
@@ -93,8 +92,8 @@ def compras(todas_listas):
                     print("Y envie el comprbante por ese mismo email")
                     print(">>>Email:GraficasOn@gmail.com")
                 if metodo == 2:
-                    print("Para pagar por mercado pago hagalo por medio del CBU o ALIAS")
-                    print(">>> CBU: 0000003100093985126731"
+                    print("Para pagar por mercado pago hagalo por medio del CVU o ALIAS")
+                    print(">>> CVU: 0000003100093985126731"
                           ">>> ALIAS : casa.pc.1")
                     print("Enviar comprobante por Whatsapp al siguiente numero")
                     print(">>> Numero: 3518579473")
