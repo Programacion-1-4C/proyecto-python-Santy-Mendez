@@ -167,7 +167,7 @@ def compras(todas_listas):
                         print(">>>CVU:0000003100093985126731")
                     if metodo == 5:
                         print("Por favor abone el monto del producto en caja")
-                if pregunta_2 =="no" or "No" or "NO":
+                if pregunta_3 =="no" or "No" or "NO":
                     print("No tenemos la grafica que buscas, disiculpanos :(")
-            else:
+            if pregunta_2 == "No" or "no" or "NO":
                 print("No tenemos la grafica que buscas, disiculpanos :(")
