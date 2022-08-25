@@ -108,9 +108,8 @@ def compras(todas_listas):
                     contador_4 = len(str(ultimos_4))
                     nombre_y_apellido = input("Ingrese el nombre y apelido del titular\n>>>")
                     nombre_y_apellido_2 = nombre_y_apellido.upper()
-                    mes_cvv = int(input("Ingrese el mes del vencimiento \n>>>"))
-                    año_cvv = int(input("Ingrese el año de vencimiento\n>>>"))
-                    if mes_cvv != 8 and año_cvv != 22 and contador_1 == 4 and contador_2 == 4 and contador_3 == 4 and contador_4 == 4:
+                    vencimiento= input("Ingrese La fecha de vencimiento\n>>>")
+                    if vencimiento < "08/22" and contador_1 == 4 and contador_2 == 4 and contador_3 == 4 and contador_4 == 4:
                         print("Datos aceptados ")
                         print("La compra fue correctamente hecha!")
                     else:
@@ -122,8 +121,8 @@ def compras(todas_listas):
                     print("Por favor abone el monto del producto en caja")
         else:
             pregunta_2 = input("Quieres buscar otra grafica?\n>>>")
-            if pregunta_2 == "si":
-                print(todas_listas)
+            if pregunta_2 == "si" or "Si" or "SI":
+                mostrar_lista(todas_listas)
                 pregunta_3=input("Encontraste algo para comprar?\n>>>")
                 if pregunta_3 == "si":
                     print("comprar")
@@ -168,7 +167,7 @@ def compras(todas_listas):
                         print(">>>CVU:0000003100093985126731")
                     if metodo == 5:
                         print("Por favor abone el monto del producto en caja")
-                else:
+                if pregunta_2 =="no" or "No" or "NO":
                     print("No tenemos la grafica que buscas, disiculpanos :(")
             else:
                 print("No tenemos la grafica que buscas, disiculpanos :(")
