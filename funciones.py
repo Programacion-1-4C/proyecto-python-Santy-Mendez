@@ -121,10 +121,12 @@ def compras(todas_listas):
                     print("Por favor abone el monto del producto en caja")
         else:
             pregunta_2 = input("Quieres buscar otra grafica?\n>>>")
-            if pregunta_2 == "si" or "Si" or "SI":
+            pregunta_2A = pregunta_2.upper()
+            if pregunta_2A == "SI":
                 mostrar_lista(todas_listas)
                 pregunta_3=input("Encontraste algo para comprar?\n>>>")
-                if pregunta_3 == "si":
+                pregunta_3A = pregunta_3.upper()
+                if pregunta_3A == "SI":
                     print("comprar")
                     print("Opciones de Pago:")
                     print(">>>1.Paypal")
@@ -167,7 +169,7 @@ def compras(todas_listas):
                         print(">>>CVU:0000003100093985126731")
                     if metodo == 5:
                         print("Por favor abone el monto del producto en caja")
-                if pregunta_3 =="no" or "No" or "NO":
+                if pregunta_3A == "NO":
                     print("No tenemos la grafica que buscas, disiculpanos :(")
-            if pregunta_2 == "No" or "no" or "NO":
+            if pregunta_2A == "NO":
                 print("No tenemos la grafica que buscas, disiculpanos :(")
